@@ -1,28 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terra Nove</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Terra Nove</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #f2f2f2;
+    text-align: center;
+}
+
+header {
+    background: #222;
+    color: white;
+    padding: 20px;
+}
+
+.card {
+    background: #fff;
+    width: 250px;
+    margin: 30px auto;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+</style>
+
 </head>
+
 <body>
 
 <header>
-  <h1>Terra Nove</h1>
-  <p>Escolha sua peça e fale no WhatsApp</p>
+    <h1>Terra Nove</h1>
+    <p>Escolha sua peça e fale no WhatsApp</p>
 </header>
 
-<div class="galeria">
-
-  <div class="item" onclick="abrirWhats('Camiseta Terra Nove Marrom')">
-   <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg" width="200">
-    <h3>Camiseta Terra Nove</h3>
+<div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg">
+    <h2>Camiseta Terra Nove</h2>
     <p>Marrom</p>
-  </div>
-
 </div>
 
-<script src="script.js"></script>
 </body>
 </html>
