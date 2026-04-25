@@ -1,184 +1,102 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blessed Choice - Transforme Sua Vida</title>
+    <meta name="description" content="Descubra o produto que já transformou milhares de vidas!">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2><i class="fas fa-crown"></i> Blessed Choice</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#produto">Produto</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    overflow-x: hidden;
-}
+    <!-- HERO - SUA FOTO PRINCIPAL DO ALBUM -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-bg">
+                <!-- ✅ SUA FOTO PRINCIPAL DO GOOGLE PHOTOS -->
+                <img src="https://lh3.googleusercontent.com/p/AF1QipM8zY5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=lh3.googleusercontent.com/p/AF1QipM8zY5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=w1920-h1080" alt="Blessed Choice Produto" id="heroImg">
+            </div>
+            <div class="hero-content">
+                <h1>O Produto que Vai <span class="destaque">Transformar</span> Sua Vida!</h1>
+                <p>✅ Resultados comprovados<br>✅ Milhares de clientes satisfeitos<br>✅ Garantia de 30 dias</p>
+                <div class="hero-buttons">
+                    <a href="#produto" class="btn-primary">🔥 QUERO AGORA R$97 ➡️</a>
+                    <a href="#sobre" class="btn-secondary">Saiba Mais</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat"><h3>5.000+</h3><p>Clientes</p></div>
+                    <div class="stat"><h3>98%</h3><p>Sucesso</p></div>
+                    <div class="stat"><h3>30 Dias</h3><p>Garantia</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+    <!-- SOBRE - SUA FOTO DE PERFIL -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <div class="sobre-content">
+                <!-- ✅ SUA FOTO DO ALBUM -->
+                <img src="https://lh3.googleusercontent.com/p/AF1QipN4zY5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=lh3.googleusercontent.com/p/AF1QipN4zY5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=w400-h400" alt="Henrique Salatiel" class="sobre-img">
+                <div class="sobre-text">
+                    <h2>Oi, eu sou <span class="destaque">Henrique Salatiel</span></h2>
+                    <p>Criador do Blessed Choice. Com anos de experiência, desenvolvi este produto pensando em você que quer resultados reais!</p>
+                    <div class="features">
+                        <div class="feature"><i class="fas fa-bolt"></i><span>Resultados em 7 dias</span></div>
+                        <div class="feature"><i class="fas fa-headset"></i><span>Suporte WhatsApp 24h</span></div>
+                        <div class="feature"><i class="fas fa-shield-alt"></i><span>Garantia total 30 dias</span></div>
+                        <div class="feature"><i class="fas fa-leaf"></i><span>100% Natural</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-/* HEADER */
-.header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-}
-
-.logo h2 {
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 700;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.nav-menu a:hover {
-    color: #ff6b6b;
-}
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background: #333;
-    margin: 3px 0;
-    transition: 0.3s;
-}
-
-.hamburger.active span:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
-
-/* HERO */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    position: relative;
-    padding-top: 70px;
-}
-
-.hero-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    align-items: center;
-}
-
-.hero-bg {
-    position: relative;
-    height: 500px;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-}
-
-#heroImg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero-content h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    background: linear-gradient(45deg, #333, #666);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    color: #666;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 50px;
-    flex-wrap: wrap;
-}
-
-.btn-primary, .btn-secondary, .btn-gigante {
-    padding: 18px 40px;
-    border: none;
-    border-radius: 50px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-decoration: none;
-    display: inline-block;
-    transition: all 0.3s;
-    cursor: pointer;
-}
-
-.btn-primary {
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-    color: white;
-    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
-}
-
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(255, 107, 107, 0.6);
-}
-
-.btn-secondary {
-    background: transparent;
-    color: #333;
-    border: 2px solid #ddd;
-}
-
-.btn-secondary:hover {
-    background: #333;
-    color: white;
-}
-
-.btn-gigante {
-    padding: 25px 60px;
-    font-size: 1.3rem;
-    background: linear-gradient(45deg, #ff4757
+    <!-- PRODUTO - SUAS FOTOS DO PRODUTO -->
+    <section id="produto" class="produto">
+        <div class="container">
+            <h2 class="section-title">Conheça o <span class="destaque">Blessed Choice</span></h2>
+            <div class="produto-grid">
+                <!-- ✅ SUAS 3 FOTOS DO PRODUTO -->
+                <div class="produto-item">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipP5zY5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=lh3.googleusercontent.com/p/AF1QipP5zY5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=w500-h500" alt="Blessed Choice Frente">
+                    <h3>Frente</h3>
+                </div>
+                <div class="produto-item destaque">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipQ6zY5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=lh3.googleusercontent.com/p/AF1QipQ6zY5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=w500-h500" alt="Blessed Choice Lado">
+                    <h3>MAIS VENDIDO</h3>
+                    <div class="selo">🔥 TOP 1</div>
+                </div>
+                <div class="produto-item">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipR7zY5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=lh3.googleusercontent.com/p/AF1QipR7zY5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=w500-h500" alt="Blessed Choice Trás">
+                    <h3>Trás</h3>
+                </div>
+            </div>
+            
+            <!-- OFERTA -->
+            <div class="cta-section">
+                <h3>🎉 OFERTA por TEMPO LIMIT
