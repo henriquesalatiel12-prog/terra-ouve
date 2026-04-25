@@ -1,52 +1,134 @@
-/* ADICIONE NO FINAL do style.css */
-
-.destaque {
-    color: #ff6b6b !important;
-    font-weight: 700;
+/* MODAL WHATSAPP */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
 }
 
-.selo {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: #ff4757;
-    color: white;
-    padding: 5px 15px;
+.modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 30px;
     border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 700;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    animation: modalSlide 0.3s ease;
 }
 
-.urgencia {
-    font-size: 1.5rem;
-    color: #ffd700;
-    font-weight: 700;
+@keyframes modalSlide {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #999;
+}
+
+.close:hover { color: #ff6b6b; }
+
+.modal-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal-header i {
+    font-size: 3rem;
+    color: #25D366;
+    margin-bottom: 10px;
+}
+
+.modal-header h3 {
+    color: #333;
+    margin: 0;
+}
+
+.modal-preco {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 1.3rem;
     margin: 20px 0;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-whatsapp-confirm {
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-whatsapp-confirm:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+}
+
+.btn-cancel {
+    background: #f8f9fa;
+    color: #666;
+    border: 2px solid #ddd;
+    padding: 15px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-cancel:hover {
+    background: #ff6b6b;
+    color: white;
+    border-color: #ff6b6b;
+}
+
+/* BOTÃO FLUTUANTE WHATSAPP */
+.whatsapp-float {
+    position: relative;
+}
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    text-decoration: none;
     animation: pulse 2s infinite;
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-.garantias {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
-    font-size: 1.1rem;
-}
-
-.garantias i {
-    color: #4ecdc4;
-    margin-right: 5px;
-}
-
 @media (max-width: 768px) {
-    .garantias {
-        flex-direction: column;
-        gap: 10px;
-    }
+    .modal-content { margin: 20% auto; padding: 20px; }
+    .whatsapp-btn { bottom: 80px; }
 }
