@@ -1,69 +1,170 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Terra Nove</title>
-
-<style>
-body {
-    font-family: Arial;
-    background: #f2f2f2;
-    text-align: center;
-}
-
-header {
-    background: #222;
-    color: white;
-    padding: 20px;
-}
-
-.card {
-    background: #fff;
-    width: 250px;
-    margin: 30px auto;
-    padding: 15px;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.botao {
-    display: inline-block;
-    margin-top: 10px;
-    background: #25D366;
-    color: white;
-    padding: 10px;
-    border-radius: 8px;
-    text-decoration: none;
-}
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blessed Choice - Seu Produto Incrível</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>Blessed Choice</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#produto">Produto</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-<header>
-    <h1>Terra Nove</h1>
-    <p>Escolha sua peça e fale no WhatsApp</p>
-</header>
+    <!-- HERO SECTION - ✅ SUA IMAGEM PRINCIPAL -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-bg">
+                <img src="https://lh3.googleusercontent.com/drive-viewer/AJc5JmSkgq8zY5Z8Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=lh3.googleusercontent.com/drive-viewer/AJc5JmSkgq8zY5Z8Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=w1920-h1080" alt="Produto Principal" id="heroImg">
+            </div>
+            <div class="hero-content">
+                <h1>O Seu Produto que Vai Mudar Sua Vida!</h1>
+                <p>Descubra o poder transformador que já ajudou milhares de pessoas a alcançarem seus objetivos.</p>
+                <div class="hero-buttons">
+                    <a href="#produto" class="btn-primary">Quero Meu Produto Agora!</a>
+                    <a href="#sobre" class="btn-secondary">Saiba Mais</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>5.000+</h3>
+                        <p>Clientes Satisfeitos</p>
+                    </div>
+                    <div class="stat">
+                        <h3>98%</h3>
+                        <p>Taxa de Sucesso</p>
+                    </div>
+                    <div class="stat">
+                        <h3>30 Dias</h3>
+                        <p>Garantia Total</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="card">
-    <img src="https://photos.app.goo.gl/kdlPXounXgitMsl47">
-    <h2>Camiseta Terra Nove</h2>
-    <p>Cor: Marrom</p>
+    <!-- SOBRE -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <div class="sobre-content">
+                <!-- ✅ SUA FOTO DE PERFIL -->
+                <img src="https://lh3.googleusercontent.com/drive-viewer/AJc5JmSkgq8zY5Z8Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=lh3.googleusercontent.com/drive-viewer/AJc5JmSkgq8zY5Z8Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=w400-h400" alt="Sobre Nós" class="sobre-img">
+                <div class="sobre-text">
+                    <h2>Por Que Escolher Nosso Produto?</h2>
+                    <p>Com mais de 10 anos de experiência, desenvolvemos a solução perfeita para suas necessidades. Nosso produto é testado e aprovado por especialistas.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Resultados em 7 dias</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Suporte 24/7</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>100% Natural</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <a class="botao" href="https://wa.me/55SEUNUMERO?text=Olá,%20quero%20a%20camiseta%20marrom" target="_blank">
-        Comprar no WhatsApp
-    </a>
-</div>
+    <!-- PRODUTO -->
+    <section id="produto" class="produto">
+        <div class="container">
+            <h2 class="section-title">Nosso Produto Incrível</h2>
+            <div class="produto-grid">
+                <!-- ✅ SUAS IMAGENS DE PRODUTO -->
+                <div class="produto-item">
+                    <img src="https://lh3.googleusercontent.com/drive-viewer/AJc5JmSkgq8zY5Z8Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=lh3.googleusercontent.com/drive-viewer/AJc5JmSkgq8zY5Z8Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=w500-h500" alt="Produto 1">
+                    <h3>Versão Básica</h3>
+                    <p>Perfeito para iniciantes</p>
+                </div>
+                <div class="produto-item">
+                    <img src="https://lh3.googleusercontent.com/drive-viewer/AJc5JmSkgq8zY5Z8Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=lh3.googleusercontent.com/drive-viewer/AJc5JmSkgq8zY5Z8Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=w500-h500" alt="Produto 2">
+                    <h3>Versão Premium</h3>
+                    <p>O mais vendido!</p>
+                </div>
+                <div class="produto-item">
+                    <img src="https://lh3.googleusercontent.com/drive-viewer/AJc5JmSkgq8zY5Z8Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=lh3.googleusercontent.com/drive-viewer/AJc5JmSkgq8zY5Z8Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=w500-h500" alt="Produto 3">
+                    <h3>Versão VIP</h3>
+                    <p>Completo e definitivo</p>
+                </div>
+            </div>
+            <div class="cta-section">
+                <h3>🔥 OFERTA ESPECIAL LIMITADA! 🔥</h3>
+                <div class="preco">
+                    <span class="preco-antigo">De: R$497</span>
+                    <span class="preco-novo">Por apenas R$97</span>
+                </div>
+                <a href="#" class="btn-gigante">GARANTIR MINHA VAGA AGORA!</a>
+            </div>
+        </div>
+    </section>
 
+    <!-- DEPOIMENTOS -->
+    <section id="depoimentos" class="depoimentos">
+        <div class="container">
+            <h2 class="section-title">O Que Nossos Clientes Dizem</h2>
+            <div class="depoimentos-grid">
+                <div class="depoimento">
+                    <!-- ✅ FOTOS DE DEPOIMENTOS (use fotos de pessoas) -->
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face" alt="Cliente 1" class="depoimento-foto">
+                    <p>"Mudou completamente minha vida! Resultados incríveis em poucos dias."</p>
+                    <h4>Maria Silva</h4>
+                </div>
+                <div class="depoimento">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Cliente 2" class="depoimento-foto">
+                    <p>"Melhor investimento que já fiz. Suporte excelente!"</p>
+                    <h4>João Santos</h4>
+                </div>
+                <div class="depoimento">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Cliente 3" class="depoimento-foto">
+                    <p>"Recomendo para todos! Resultados acima das expectativas."</p>
+                    <h4>Ana Costa</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final">
+        <div class="container">
+            <h2>🚀 Última Chance! Não Perca Essa Oportunidade</h2>
+            <p>Vagas limitadas! Garanta seu produto agora mesmo.</p>
+            <a href="#" class="btn-gigante">QUERO MEU PRODUTO AGORA!</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contato" class="footer">
+        <div class="container">
+            <p>&copy; 2024 Blessed Choice. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
