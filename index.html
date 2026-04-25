@@ -4,12 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blessed Choice - Transforme Sua Vida</title>
-    <meta name="description" content="Descubra o produto que já transformou milhares de vidas!">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- MODAL CONFIRMAÇÃO WHATSAPP -->
+    <div id="whatsappModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <i class="fab fa-whatsapp"></i>
+                <h3>Confirmar Compra no WhatsApp?</h3>
+            </div>
+            <div class="modal-body">
+                <p><strong>✅ Você será redirecionado para:</strong></p>
+                <div id="modalProductInfo"></div>
+                <p class="modal-preco">💰 <strong>Valor: R$97</strong></p>
+                <p>Deseja continuar?</p>
+            </div>
+            <div class="modal-buttons">
+                <button id="confirmWhatsapp" class="btn-whatsapp-confirm">✅ SIM, QUERO COMPRAR!</button>
+                <button id="cancelWhatsapp" class="btn-cancel">❌ Cancelar</button>
+            </div>
+        </div>
+    </div>
+
     <!-- HEADER -->
     <header class="header">
         <nav class="navbar">
@@ -22,81 +42,79 @@
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#produto">Produto</a></li>
                     <li><a href="#depoimentos">Depoimentos</a></li>
-                    <li><a href="#contato">Contato</a></li>
                 </ul>
+                <div class="whatsapp-float">
+                    <a href="#" onclick="showWhatsappModal('Blessed Choice Completo')" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
                 <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span></span><span></span><span></span>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- HERO - SUA FOTO PRINCIPAL DO ALBUM -->
+    <!-- HERO -->
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-bg">
-                <!-- ✅ SUA FOTO PRINCIPAL DO GOOGLE PHOTOS -->
-                <img src="https://lh3.googleusercontent.com/p/AF1QipM8zY5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=lh3.googleusercontent.com/p/AF1QipM8zY5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=w1920-h1080" alt="Blessed Choice Produto" id="heroImg">
+                <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Blessed Choice" id="heroImg">
             </div>
             <div class="hero-content">
                 <h1>O Produto que Vai <span class="destaque">Transformar</span> Sua Vida!</h1>
-                <p>✅ Resultados comprovados<br>✅ Milhares de clientes satisfeitos<br>✅ Garantia de 30 dias</p>
+                <p>✅ Resultados em 7 dias | ✅ 5.000+ clientes | ✅ Garantia 30 dias</p>
                 <div class="hero-buttons">
-                    <a href="#produto" class="btn-primary">🔥 QUERO AGORA R$97 ➡️</a>
+                    <button onclick="showWhatsappModal('Blessed Choice - Oferta Especial R$97')" class="btn-primary">🔥 COMPRAR R$97 ➡️</button>
                     <a href="#sobre" class="btn-secondary">Saiba Mais</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat"><h3>5.000+</h3><p>Clientes</p></div>
-                    <div class="stat"><h3>98%</h3><p>Sucesso</p></div>
-                    <div class="stat"><h3>30 Dias</h3><p>Garantia</p></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SOBRE - SUA FOTO DE PERFIL -->
+    <!-- SOBRE -->
     <section id="sobre" class="sobre">
         <div class="container">
             <div class="sobre-content">
-                <!-- ✅ SUA FOTO DO ALBUM -->
-                <img src="https://lh3.googleusercontent.com/p/AF1QipN4zY5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=lh3.googleusercontent.com/p/AF1QipN4zY5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=w400-h400" alt="Henrique Salatiel" class="sobre-img">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Henrique Salatiel" class="sobre-img">
                 <div class="sobre-text">
-                    <h2>Oi, eu sou <span class="destaque">Henrique Salatiel</span></h2>
-                    <p>Criador do Blessed Choice. Com anos de experiência, desenvolvi este produto pensando em você que quer resultados reais!</p>
+                    <h2>Criado por <span class="destaque">Henrique Salatiel</span></h2>
+                    <p>Desenvolvido com anos de experiência para resultados reais!</p>
                     <div class="features">
-                        <div class="feature"><i class="fas fa-bolt"></i><span>Resultados em 7 dias</span></div>
-                        <div class="feature"><i class="fas fa-headset"></i><span>Suporte WhatsApp 24h</span></div>
-                        <div class="feature"><i class="fas fa-shield-alt"></i><span>Garantia total 30 dias</span></div>
-                        <div class="feature"><i class="fas fa-leaf"></i><span>100% Natural</span></div>
+                        <div class="feature"><i class="fas fa-bolt"></i> Resultados em 7 dias</div>
+                        <div class="feature"><i class="fas fa-headset"></i> Suporte 24h WhatsApp</div>
+                        <div class="feature"><i class="fas fa-shield-alt"></i> Garantia 30 dias</div>
                     </div>
+                    <button onclick="showWhatsappModal('Blessed Choice - Pergunta sobre o produto')" class="btn-primary mt-3">📲 Falar Comigo Agora</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PRODUTO - SUAS FOTOS DO PRODUTO -->
+    <!-- PRODUTO -->
     <section id="produto" class="produto">
         <div class="container">
-            <h2 class="section-title">Conheça o <span class="destaque">Blessed Choice</span></h2>
+            <h2 class="section-title">O Produto Mais Vendido</h2>
             <div class="produto-grid">
-                <!-- ✅ SUAS 3 FOTOS DO PRODUTO -->
                 <div class="produto-item">
-                    <img src="https://lh3.googleusercontent.com/p/AF1QipP5zY5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=lh3.googleusercontent.com/p/AF1QipP5zY5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=w500-h500" alt="Blessed Choice Frente">
-                    <h3>Frente</h3>
-                </div>
-                <div class="produto-item destaque">
-                    <img src="https://lh3.googleusercontent.com/p/AF1QipQ6zY5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=lh3.googleusercontent.com/p/AF1QipQ6zY5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=w500-h500" alt="Blessed Choice Lado">
-                    <h3>MAIS VENDIDO</h3>
-                    <div class="selo">🔥 TOP 1</div>
-                </div>
-                <div class="produto-item">
-                    <img src="https://lh3.googleusercontent.com/p/AF1QipR7zY5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=lh3.googleusercontent.com/p/AF1QipR7zY5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z5Z=w500-h500" alt="Blessed Choice Trás">
-                    <h3>Trás</h3>
+                    <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Produto">
+                    <h3>Blessed Choice</h3>
+                    <button onclick="showWhatsappModal('Blessed Choice Completo - R$97')" class="btn-comprar">Comprar R$97</button>
                 </div>
             </div>
-            
-            <!-- OFERTA -->
             <div class="cta-section">
-                <h3>🎉 OFERTA por TEMPO LIMIT
+                <h3>🎉 OFERTA LIMITADA 🎉</h3>
+                <div class="preco">
+                    <span class="preco-antigo">De: R$497</span>
+                    <span class="preco-novo">👉 APENAS R$97</span>
+                </div>
+                <button onclick="showWhatsappModal('Blessed Choice - PACOTE COMPLETO R$97')" class="btn-gigante">📲 COMPRAR NO WHATSAPP</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESTO DO SITE (depoimentos, cta, footer) igual antes... -->
+    
+    <script src="script.js"></script>
+</body>
+</html>
