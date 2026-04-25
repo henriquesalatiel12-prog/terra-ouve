@@ -1,10 +1,26 @@
-function abrirWhats(produto) {
-  let numero = "SEU_NUMERO_AQUI"; // troque aqui
+// Menu mobile
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
 
-  let mensagem = `Oi, tenho interesse na ${produto}`;
-  let url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
 
-  if (confirm("Quer falar no WhatsApp sobre esse produto?")) {
-    window.open(url, "_blank");
-  }
-}
+// Fechar menu ao clicar em link
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
+});
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
